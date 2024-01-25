@@ -1,0 +1,4 @@
+Enable iis
+download putty
+download plink
+download metasploit freamwork
