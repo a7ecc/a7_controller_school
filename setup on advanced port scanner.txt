@@ -1,0 +1,1 @@
+start /min plink -no-antispoof -m commands.txt -pw 55991133 administrator@
